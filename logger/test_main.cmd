@@ -25,8 +25,8 @@ rem ############################################################################
 rem # Initialise
 rem ############################################################################
 call "%logger%" SetLogLevel debug
-rem # call "%logger%" CreateLogfile "%logfile%"
-rem # call "%logger%" OpenLogfile   "%logfile%"
+rem # call "%logger%" CreateLogFile "%logfile%"
+rem # call "%logger%" OpenLogFile   "%logfile%"
 
 
 rem ############################################################################
@@ -45,7 +45,7 @@ rem ############################################################################
 
     call "%logger%" info "%func% The command-line options are as below:"
     for %%c in (%*%) do (
-        call "%logger%" info "%func% %%c"
+        call "%logger%" info "%func% %%~c"
     )
 
     call "%logger%" debug "%func% end"

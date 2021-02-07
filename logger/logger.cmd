@@ -7,7 +7,7 @@ rem # HowToUse : Define variables
 rem #              when logger.ps1 is located to functions folder
 rem #              set scriptdir=%~d0%~p0
 rem #              set logger=%scriptdir%functions\logger.cmd
-rem #            LogOutout configuration
+rem #            Log output configuration
 rem #              when you use the debug level:
 rem #                call "%logger%" SetLogLevel debug
 rem #              if you need a log file:
@@ -15,7 +15,7 @@ rem #                clear log file before write
 rem #                  call "%logger%" CreateLogFile "%logfile%"
 rem #                not clear log file before write
 rem #                  call "%logger%" SetLogFile "%logfile%"
-rem #            LogOutput
+rem #            Lot output
 rem #              call "%logger%" debug    "debug level message"
 rem #              call "%logger%" info     "info level message"
 rem #              call "%logger%" warning  "warning level message"
@@ -67,7 +67,7 @@ for %%a in (%*%) do (
 )
 
 if %argc% neq 2 (
-    echo "%date%","%time%","%logger_error_label%","command-lint argment error"
+    echo "%date%","%time%","%logger_error_label%","command-line argment error"
     exit /b %logger_error_end%
 )
 
@@ -81,7 +81,7 @@ goto %~1%
 rem ############################################################################
 rem # Create logfile
 rem ############################################################################
-:CreateLogfile
+:CreateLogFile
     set logger_logfile_tmp=%~2%
     call :SetLogDir "%logger_logfile_tmp%"
 
@@ -107,7 +107,7 @@ goto :eof
 rem ############################################################################
 rem # Set logfile
 rem ############################################################################
-:OpenLogfile
+:OpenLogFile
     set logger_logfile_tmp=%~2%
     call :SetLogDir "%logger_logfile_tmp%"
 
