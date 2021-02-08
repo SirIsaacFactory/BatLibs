@@ -2,7 +2,7 @@
 rem ############################################################################
 rem # This software is released under the MIT License see LICENSE.txt
 rem # Filename : logger.cmd
-rem # Overview : Dispay log /Write log to file.
+rem # Overview : Display log/Write log to a file.
 rem # HowToUse : Define variables
 rem #              when logger.ps1 is located to functions folder
 rem #              set scriptdir=%~d0%~p0
