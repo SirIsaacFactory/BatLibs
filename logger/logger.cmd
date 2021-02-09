@@ -23,6 +23,7 @@ rem #              call "%logger%" error    "error level message"
 rem #              call "%logger%" critical "critical level message"
 rem #---------------------------------------------------------------------------
 rem # Author: Isaac Factory (sir.isaac.factory@icloud.com)
+rem # Repository: https://github.com/SirIsaacFactory
 rem # Date: 2021/02/02
 rem # Code version: v1.00
 rem ############################################################################

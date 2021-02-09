@@ -6,6 +6,7 @@ rem # Overview : test script for logger.ps1
 rem # HowToUse : test_main.cmd
 rem #---------------------------------------------------------------------------
 rem # Author: Isaac Factory (sir.isaac.factory@icloud.com)
+rem # Repository: https://github.com/SirIsaacFactory
 rem # Date: 2021/02/02
 rem # Code version: v1.00
 rem ############################################################################
