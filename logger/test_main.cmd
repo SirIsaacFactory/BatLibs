@@ -21,7 +21,6 @@ set logbase=%~n0
 set logfile=%scriptdir%%logbase%.log
 set logger=%scriptdir%logger.cmd
 
-
 rem ############################################################################
 rem # Initialise
 rem ############################################################################
@@ -29,12 +28,11 @@ call "%logger%" SetLogLevel debug
 rem # call "%logger%" CreateLogFile "%logfile%"
 rem # call "%logger%" OpenLogFile   "%logfile%"
 
-
 rem ############################################################################
 rem # goto main
 rem ############################################################################
 goto :main
-
+goto :eof
 
 rem ############################################################################
 rem # displayArgs
@@ -43,16 +41,17 @@ rem ############################################################################
     setlocal
     set func=displayArgs
     call "%logger%" debug "%func% start"
-
-    call "%logger%" info "%func% The command-line options are as below:"
-    for %%c in (%*%) do (
-        call "%logger%" info "%func% %%~c"
-    )
-
+    call :displayArgs_sub %*%
     call "%logger%" debug "%func% end"
     endlocal
 goto :eof
 
+:displayArgs_sub
+    call "%logger%" info "%func% The command-line options are as below:"
+    for %%c in (%*%) do (
+        call "%logger%" info "%func% %%~c"
+    )
+goto :eof
 
 rem ############################################################################
 rem # main
@@ -61,7 +60,12 @@ rem ############################################################################
     setlocal
     set func=main
     call "%logger%" debug "%func% start"
+    call :main_sub %*%
+    call "%logger%" debug "%func% end"
+    endlocal
+goto :eof
 
+:main_sub
     set argc=0
     for %%a in (%*%) do (
         set /a argc+=1
@@ -75,7 +79,4 @@ rem ############################################################################
     )
 
     call :displayArgs %*%
-
-    call "%logger%" debug "%func% end"
-    endlocal
 goto :eof
