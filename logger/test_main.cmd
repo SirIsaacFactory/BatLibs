@@ -2,7 +2,7 @@
 rem ############################################################################
 rem # This software is released under the MIT License see LICENSE.txt
 rem # Filename : test_main.cmd
-rem # Overview : test script for logger.ps1
+rem # Overview : test script for logger.cmd
 rem # HowToUse : test_main.cmd
 rem #---------------------------------------------------------------------------
 rem # Author: Isaac Factory (sir.isaac.factory@icloud.com)
